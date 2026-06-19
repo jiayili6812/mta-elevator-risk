@@ -1,0 +1,72 @@
+project:
+  name: mta-elevator-next-month-failure
+  random_seed: 42
+
+paths:
+  availability_csv: data/raw/df3_availability.csv
+  outputs_dir: outputs
+
+target:
+  horizon_months: 1
+  unscheduled_outage_threshold: 2
+  entrapment_threshold: 0
+
+secondary_target:
+  unscheduled_outage_threshold: 1
+  entrapment_threshold: 0
+
+split:
+  frozen_test_start: "2025-02-01"
+  frozen_test_end: "2025-04-01"
+  validation_months: 3
+  rolling_validation_folds: 4
+
+features:
+  lag_months: [1, 2, 3]
+  rolling_windows: [3, 6]
+  include_age: true
+  age_missing_strategy: median_imputation_with_missingness_indicator
+  include_seasonality: true
+  selected_feature_set: full_history
+  feature_sets:
+    current_only:
+      lag_months: []
+      rolling_windows: []
+    short_history:
+      lag_months: [1, 2, 3]
+      rolling_windows: [3]
+    full_history:
+      lag_months: [1, 2, 3]
+      rolling_windows: [3, 6]
+
+eligibility:
+  include_newly_introduced_equipment: true
+  excluded_equipment_code_suffixes: ["X"]
+  exclusion_reason: "Current X-suffixed rows have structurally incomplete target and age reporting."
+  minimum_history_months: null
+
+modeling:
+  primary_metric: average_precision
+  supporting_metrics:
+    - precision
+    - recall
+    - false_negatives
+    - roc_auc
+    - brier_score
+  provisional_minimum_pr_auc: 0.45
+  provisional_strong_pr_auc: 0.55
+
+guardrails:
+  final_test_acknowledgment: I_UNDERSTAND_THIS_ACCESSES_THE_FROZEN_TEST_SET
+  audit_log: outputs/metrics/frozen_test_access.log
+  final_selection_record: config/final_model_selection.yaml
+  expected_frozen_target_eligible_rows: 1022
+  expected_frozen_target_eligible_rows_by_month:
+    "2025-02-01": 340
+    "2025-03-01": 341
+    "2025-04-01": 341
+  expected_frozen_feature_rows: 974
+  expected_frozen_feature_rows_by_month:
+    "2025-02-01": 324
+    "2025-03-01": 324
+    "2025-04-01": 326

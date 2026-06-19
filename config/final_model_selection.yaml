@@ -1,0 +1,18 @@
+# Keep approved_for_final_test false throughout development.
+approved_for_final_test: true
+approval_date: "2026-06-16"
+selected_target: primary
+selected_model: random_forest
+selected_feature_set: full_history_without_age
+selected_threshold: 0.4433219097353501
+development_results_path: outputs/metrics/final_development_model_decision.json
+selected_parameters:
+  n_estimators: 600
+  max_depth: 20
+  min_samples_leaf: 15
+  max_features: sqrt
+  class_weight: balanced_subsample
+  random_state: 42
+calibration: none
+threshold_policy: approximately_70_percent_recall_selected_on_folds_1_to_3
+decision_notes: "Development-only selection completed and locked. Session 5 preflight passed before approval; frozen-test evaluation is authorized exactly once with no post-test tuning."

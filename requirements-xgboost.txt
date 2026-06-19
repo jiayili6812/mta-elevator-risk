@@ -1,0 +1,3 @@
+# Optional Session 4.3 XGBoost challenger. Keep separate from the core pipeline.
+-r requirements.txt
+xgboost==2.1.4

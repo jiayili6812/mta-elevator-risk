@@ -1,0 +1,6 @@
+# Do not change this file during model development.
+frozen_test_start: "2025-02-01"
+frozen_test_end: "2025-04-01"
+reason: "Agreed final untouched temporal test period."
+locked: true
+

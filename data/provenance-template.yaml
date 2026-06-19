@@ -1,0 +1,22 @@
+dataset_filename: df3_availability.csv
+source_organization: Metropolitan Transportation Authority via data.ny.gov
+source_url: https://data.ny.gov/Transportation/MTA-NYCT-Subway-Elevator-and-Escalator-Availabilit/rc78-7x78/about_data
+retrieval_date: "Approximately August 2025; exact date unknown"
+original_filename: null
+manually_modified: true
+modification_notes: "Project owner cleaned the source data, but removed columns and rows are not currently documented."
+row_definition: "Believed to represent one equipment asset for one complete calendar month; confirm against source documentation."
+coverage_start: "2021-01-01"
+coverage_end: "2025-05-01"
+known_limitations:
+  - "This is a derived cleaned snapshot; transformations from the original source are not documented."
+  - "X-suffixed equipment had missing source fields when accessed around August 2025."
+  - "In the current snapshot, X-suffixed rows have no reported unscheduled outages, no reported entrapments, and no Time Since Major Improvement values."
+field_definitions:
+  Scheduled Outages: "See official source-page column description; preserve exact source definition."
+  Unscheduled Outages: "Count of distinct unscheduled-outage incidents for the equipment-month, per project owner."
+  Entrapments: "See official source-page column description; preserve exact source definition."
+  Time Since Major Improvement: "Days since the asset's last major improvement."
+  AM Peak Availability: "See official source-page column description; expected proportion in [0, 1]."
+  PM Peak Availability: "See official source-page column description; expected proportion in [0, 1]."
+  24-Hour Availability: "See official source-page column description; expected proportion in [0, 1]."

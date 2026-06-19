@@ -1,0 +1,3 @@
+# Optional TCN challenger only. Install after the tabular readiness gate.
+-r requirements.txt
+tensorflow==2.19.1

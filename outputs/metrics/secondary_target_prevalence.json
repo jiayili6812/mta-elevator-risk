@@ -1,0 +1,10 @@
+{
+  "target": "secondary",
+  "unscheduled_outage_threshold": 1,
+  "entrapment_threshold": 0,
+  "scope": "development rows eligible for selected feature set; frozen labels excluded",
+  "labeled_rows": 13202,
+  "positive_rows": 8185,
+  "negative_rows": 5017,
+  "prevalence": 0.6199818209362218
+}

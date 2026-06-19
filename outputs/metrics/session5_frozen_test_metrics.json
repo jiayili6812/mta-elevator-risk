@@ -1,0 +1,343 @@
+{
+  "status": "valid_final_frozen_test_evaluation",
+  "evaluated_at_utc": "2026-06-15T17:18:24.378812+00:00",
+  "scope": "one-time final frozen-test evaluation; not used for model selection or tuning",
+  "cohort": {
+    "rows": 974,
+    "elevators": 326,
+    "positives": 389,
+    "negatives": 585,
+    "prevalence": 0.3993839835728953,
+    "rows_by_month": {
+      "2025-02-01": 324,
+      "2025-03-01": 324,
+      "2025-04-01": 326
+    },
+    "elevators_by_month": {
+      "2025-02-01": 324,
+      "2025-03-01": 324,
+      "2025-04-01": 326
+    }
+  },
+  "overall_metrics": {
+    "pr_auc": 0.6480035075956689,
+    "roc_auc": 0.7168061872432052,
+    "brier_score": 0.20997589459948918,
+    "precision": 0.5263157894736842,
+    "recall": 0.6940874035989717,
+    "threshold": 0.4433219097353501,
+    "true_negatives": 342,
+    "false_positives": 243,
+    "false_negatives": 119,
+    "true_positives": 270
+  },
+  "calibration": {
+    "bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "rows": 89,
+        "mean_probability": 0.1126227977244991,
+        "observed_rate": 0.033707865168539325
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "rows": 279,
+        "mean_probability": 0.3284570784279404,
+        "observed_rate": 0.2974910394265233
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "rows": 335,
+        "mean_probability": 0.4912695936814407,
+        "observed_rate": 0.3850746268656716
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.8,
+        "rows": 206,
+        "mean_probability": 0.6813555938291104,
+        "observed_rate": 0.5728155339805825
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "rows": 65,
+        "mean_probability": 0.858563170475076,
+        "observed_rate": 0.8615384615384616
+      }
+    ],
+    "expected_calibration_error": 0.07576069200213065,
+    "mean_probability": 0.4747475628047588,
+    "observed_prevalence": 0.3993839835728953
+  },
+  "metrics_by_month": {
+    "2025-02-01": {
+      "rows": 324,
+      "elevators": 324,
+      "positives": 138,
+      "prevalence": 0.42592592592592593,
+      "pr_auc": 0.68989958565613,
+      "roc_auc": 0.7225533738507091,
+      "brier_score": 0.2081125527920684,
+      "precision": 0.5406976744186046,
+      "recall": 0.6739130434782609,
+      "threshold": 0.4433219097353501,
+      "true_negatives": 107,
+      "false_positives": 79,
+      "false_negatives": 45,
+      "true_positives": 93,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "rows": 29,
+            "mean_probability": 0.09706085856134629,
+            "observed_rate": 0.034482758620689655
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "rows": 96,
+            "mean_probability": 0.3288568412948393,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6000000000000001,
+            "rows": 107,
+            "mean_probability": 0.4949324565489877,
+            "observed_rate": 0.35514018691588783
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.8,
+            "rows": 66,
+            "mean_probability": 0.6844875882784879,
+            "observed_rate": 0.6666666666666666
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "rows": 26,
+            "mean_probability": 0.8576997486473125,
+            "observed_rate": 0.8846153846153846
+          }
+        ],
+        "expected_calibration_error": 0.058883544278599494,
+        "mean_probability": 0.4778369407547395,
+        "observed_prevalence": 0.42592592592592593
+      }
+    },
+    "2025-03-01": {
+      "rows": 324,
+      "elevators": 324,
+      "positives": 134,
+      "prevalence": 0.41358024691358025,
+      "pr_auc": 0.6559149471091135,
+      "roc_auc": 0.7343676355066772,
+      "brier_score": 0.2046145973192871,
+      "precision": 0.5562130177514792,
+      "recall": 0.7014925373134329,
+      "threshold": 0.4433219097353501,
+      "true_negatives": 115,
+      "false_positives": 75,
+      "false_negatives": 40,
+      "true_positives": 94,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "rows": 31,
+            "mean_probability": 0.11420935799841289,
+            "observed_rate": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "rows": 92,
+            "mean_probability": 0.3289980118097637,
+            "observed_rate": 0.30434782608695654
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6000000000000001,
+            "rows": 111,
+            "mean_probability": 0.49036486287989367,
+            "observed_rate": 0.4144144144144144
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.8,
+            "rows": 72,
+            "mean_probability": 0.6817162701037878,
+            "observed_rate": 0.625
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "rows": 18,
+            "mean_probability": 0.8580004803063955,
+            "observed_rate": 0.8333333333333334
+          }
+        ],
+        "expected_calibration_error": 0.05792094770711449,
+        "mean_probability": 0.4715011946206947,
+        "observed_prevalence": 0.41358024691358025
+      }
+    },
+    "2025-04-01": {
+      "rows": 326,
+      "elevators": 326,
+      "positives": 117,
+      "prevalence": 0.3588957055214724,
+      "pr_auc": 0.60188699064033,
+      "roc_auc": 0.6966016439700652,
+      "brier_score": 0.2171562107479242,
+      "precision": 0.48255813953488375,
+      "recall": 0.7094017094017094,
+      "threshold": 0.4433219097353501,
+      "true_negatives": 120,
+      "false_positives": 89,
+      "false_negatives": 34,
+      "true_positives": 83,
+      "calibration": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "rows": 29,
+            "mean_probability": 0.12648875866381304,
+            "observed_rate": 0.06896551724137931
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "rows": 91,
+            "mean_probability": 0.3274884728636544,
+            "observed_rate": 0.25274725274725274
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6000000000000001,
+            "rows": 117,
+            "mean_probability": 0.48877813036643386,
+            "observed_rate": 0.38461538461538464
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.8,
+            "rows": 68,
+            "mean_probability": 0.6779338243374091,
+            "observed_rate": 0.4264705882352941
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "rows": 21,
+            "mean_probability": 0.8601144747873667,
+            "observed_rate": 0.8571428571428571
+          }
+        ],
+        "expected_calibration_error": 0.11600788438709943,
+        "mean_probability": 0.47490358990857173,
+        "observed_prevalence": 0.3588957055214724
+      }
+    }
+  },
+  "false_positives": 243,
+  "false_negatives": 119,
+  "development_comparison": {
+    "four_fold_mean_pr_auc": 0.67957189493978,
+    "latest_fold_pr_auc": 0.715757570715045,
+    "latest_fold_precision": 0.6262230919765166,
+    "latest_fold_recall": 0.7064017660044151,
+    "latest_fold_false_positives": 191,
+    "latest_fold_false_negatives": 133
+  },
+  "fit_audit": {
+    "fit_count": 1,
+    "fit_rows": 13202,
+    "fit_equipment": 324,
+    "fit_start": "2021-06-01",
+    "fit_end": "2025-01-01",
+    "fit_precedes_frozen_test": true,
+    "preprocessing_fit_scope": "eligible development rows only",
+    "frozen_rows_used_for_learned_preprocessing": 0,
+    "frozen_labels_accessed_after_fit": true,
+    "fit_seconds": 1.9276927500031888
+  },
+  "locked_selection": {
+    "selected_target": "primary",
+    "selected_model": "random_forest",
+    "selected_feature_set": "full_history_without_age",
+    "selected_threshold": 0.4433219097353501,
+    "selected_parameters": {
+      "n_estimators": 600,
+      "max_depth": 20,
+      "min_samples_leaf": 15,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "random_state": 42
+    },
+    "calibration": "none"
+  },
+  "minimum_consecutive_history_months": 6,
+  "features": [
+    "Total Outages",
+    "Unscheduled Outages",
+    "Scheduled Outages",
+    "Entrapments",
+    "AM Peak Availability",
+    "PM Peak Availability",
+    "24-Hour Availability",
+    "total_outages_lag_1",
+    "total_outages_lag_2",
+    "total_outages_lag_3",
+    "total_outages_roll_3_mean",
+    "total_outages_roll_6_mean",
+    "unscheduled_outages_lag_1",
+    "unscheduled_outages_lag_2",
+    "unscheduled_outages_lag_3",
+    "unscheduled_outages_roll_3_mean",
+    "unscheduled_outages_roll_6_mean",
+    "scheduled_outages_lag_1",
+    "scheduled_outages_lag_2",
+    "scheduled_outages_lag_3",
+    "scheduled_outages_roll_3_mean",
+    "scheduled_outages_roll_6_mean",
+    "entrapments_lag_1",
+    "entrapments_lag_2",
+    "entrapments_lag_3",
+    "entrapments_roll_3_mean",
+    "entrapments_roll_6_mean",
+    "am_peak_availability_lag_1",
+    "am_peak_availability_lag_2",
+    "am_peak_availability_lag_3",
+    "am_peak_availability_roll_3_mean",
+    "am_peak_availability_roll_6_mean",
+    "pm_peak_availability_lag_1",
+    "pm_peak_availability_lag_2",
+    "pm_peak_availability_lag_3",
+    "pm_peak_availability_roll_3_mean",
+    "pm_peak_availability_roll_6_mean",
+    "24hour_availability_lag_1",
+    "24hour_availability_lag_2",
+    "24hour_availability_lag_3",
+    "24hour_availability_roll_3_mean",
+    "24hour_availability_roll_6_mean"
+  ],
+  "audit_log": "outputs/metrics/frozen_test_access.log",
+  "runtime_seconds": 2.231006875168532,
+  "limitations": [
+    "The source is a fixed cleaned snapshot with unknown historical cleaning steps.",
+    "X-suffixed equipment is excluded because target reporting is structurally incomplete.",
+    "Six consecutive observed months are required, so true zero-history elevator performance is not measured.",
+    "Time Since Major Improvement semantics remain unresolved and the field is excluded.",
+    "The frozen test covers only three months and may not represent longer-term temporal drift."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "source_validation": {
+    "rows": 18780,
+    "equipment": 391,
+    "start_month": "2021-01-01",
+    "end_month": "2025-05-01",
+    "nonconsecutive_transitions": 0,
+    "missing_values": {
+      "Month": 0,
+      "Borough": 0,
+      "Equipment Type": 0,
+      "Equipment Code": 0,
+      "Total Outages": 0,
+      "Scheduled Outages": 0,
+      "Unscheduled Outages": 0,
+      "Entrapments": 0,
+      "Time Since Major Improvement": 2619,
+      "AM Peak Availability": 671,
+      "AM Peak Hours Available": 0,
+      "AM Peak Total Hours": 0,
+      "PM Peak Availability": 666,
+      "PM Peak Hours Available": 0,
+      "PM Peak Total Hours": 0,
+      "24-Hour Availability": 661,
+      "24-Hour Hours Available": 0,
+      "24-Hour Total Hours": 0,
+      "Station Name": 0,
+      "Station MRN": 0,
+      "Station Complex Name": 0,
+      "Station Complex MRN": 0
+    },
+    "equipment_history_months": {
+      "minimum": 2,
+      "median": 53.0,
+      "maximum": 53
+    }
+  },
+  "eligibility": {
+    "x_suffix_rows": 2566,
+    "x_suffix_equipment": 50,
+    "eligible_rows": 16214,
+    "eligible_equipment": 341,
+    "newly_introduced_equipment": 53
+  },
+  "feature_set_history": {
+    "current_only": {
+      "minimum_consecutive_months": 1,
+      "eligible_rows": 16214,
+      "eligible_equipment": 341
+    },
+    "short_history": {
+      "minimum_consecutive_months": 4,
+      "eligible_rows": 15191,
+      "eligible_equipment": 340
+    },
+    "full_history": {
+      "minimum_consecutive_months": 6,
+      "eligible_rows": 14511,
+      "eligible_equipment": 335
+    }
+  },
+  "missing_age": {
+    "missing_non_x_rows": 53,
+    "affected_equipment": 53,
+    "all_on_first_observed_record": true,
+    "strategy": "median_imputation_with_missingness_indicator"
+  },
+  "rolling_validation_folds": [
+    {
+      "name": "2024-02_to_2024-04",
+      "train_rows": 9424,
+      "validation_rows": 918
+    },
+    {
+      "name": "2024-05_to_2024-07",
+      "train_rows": 10342,
+      "validation_rows": 937
+    },
+    {
+      "name": "2024-08_to_2024-10",
+      "train_rows": 11279,
+      "validation_rows": 957
+    },
+    {
+      "name": "2024-11_to_2025-01",
+      "train_rows": 12236,
+      "validation_rows": 966
+    }
+  ],
+  "frozen_test_count_confirmation": {
+    "rows": 974,
+    "rows_by_month": {
+      "2025-02-01": 324,
+      "2025-03-01": 324,
+      "2025-04-01": 326
+    },
+    "labels_exposed": false,
+    "matches_locked_expectations": true,
+    "target_eligible_rows_before_feature_history_filter": 1022,
+    "target_eligible_rows_by_month": {
+      "2025-02-01": 340,
+      "2025-03-01": 341,
+      "2025-04-01": 341
+    }
+  },
+  "development_target_prevalence": {
+    "primary": {
+      "target": "primary",
+      "unscheduled_outage_threshold": 2,
+      "entrapment_threshold": 0,
+      "scope": "development rows eligible for selected feature set; frozen labels excluded",
+      "labeled_rows": 13202,
+      "positive_rows": 5655,
+      "negative_rows": 7547,
+      "prevalence": 0.4283441902742009
+    },
+    "secondary": {
+      "target": "secondary",
+      "unscheduled_outage_threshold": 1,
+      "entrapment_threshold": 0,
+      "scope": "development rows eligible for selected feature set; frozen labels excluded",
+      "labeled_rows": 13202,
+      "positive_rows": 8185,
+      "negative_rows": 5017,
+      "prevalence": 0.6199818209362218
+    }
+  }
+}

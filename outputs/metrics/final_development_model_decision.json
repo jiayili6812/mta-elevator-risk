@@ -1,0 +1,68 @@
+{
+  "scope": "development-only; frozen-test labels and metrics excluded",
+  "decision_status": "selected_for_production_candidate_but_not_approved_for_frozen_test",
+  "selected_model": "random_forest",
+  "selected_feature_set": "full_history_without_age",
+  "selected_parameters": {
+    "n_estimators": 600,
+    "max_depth": 20,
+    "min_samples_leaf": 15,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "random_state": 42
+  },
+  "calibration": "none",
+  "selected_threshold": 0.4433219097353501,
+  "threshold_policy": "approximately 70% recall; selected using rolling folds 1-3 only and evaluated unchanged on fold 4",
+  "fold_4_operating_metrics": {
+    "pr_auc": 0.715757570715045,
+    "precision": 0.6262230919765166,
+    "recall": 0.7064017660044151,
+    "false_positives": 191,
+    "false_negatives": 133
+  },
+  "development_comparison": {
+    "random_forest": {
+      "folds_1_to_3_mean_pr_auc": 0.6675100030146917,
+      "four_fold_mean_pr_auc": 0.67957189493978,
+      "worst_fold_pr_auc": 0.6309402878593053,
+      "fold_4_pr_auc": 0.715757570715045,
+      "fold_4_false_positives": 191,
+      "fold_4_false_negatives": 133
+    },
+    "hist_gradient_boosting": {
+      "folds_1_to_3_mean_pr_auc": 0.6644329219498558,
+      "four_fold_mean_pr_auc": 0.6765162202585502,
+      "worst_fold_pr_auc": 0.6343908202190571,
+      "fold_4_pr_auc": 0.7127661151846332,
+      "fold_4_false_positives": 173,
+      "fold_4_false_negatives": 136
+    },
+    "logistic_regression": {
+      "folds_1_to_3_mean_pr_auc": 0.6636854411229608,
+      "four_fold_mean_pr_auc": 0.6738732450828775,
+      "worst_fold_pr_auc": 0.6241357085553236,
+      "fold_4_pr_auc": 0.7044366569626277,
+      "fold_4_false_positives": 191,
+      "fold_4_false_negatives": 137
+    }
+  },
+  "decision_rationale": [
+    "Random Forest leads folds-1-3 mean PR-AUC, four-fold mean PR-AUC, and fold-4 PR-AUC.",
+    "Random Forest has the fewest fold-4 false negatives at the model-specific approximately-70%-recall threshold.",
+    "Random Forest performance is stable across five fixed seeds.",
+    "HistGradientBoosting produces 18 fewer fold-4 false positives but three more false negatives and does not lead PR-AUC.",
+    "Logistic regression is simpler but trails both tree models on the completed development comparison.",
+    "The TCN is rejected as non-material evidence because its matching-cohort gain is below the retention rule and its fold-4 recall tradeoff is weaker."
+  ],
+  "xgboost_decision": {
+    "run_optional_xgboost": false,
+    "reason": "Skip XGBoost. The bounded sklearn boosted-tree evaluation already establishes that boosting does not surpass Random Forest on development PR-AUC, and another optional implementation would extend model search after sufficient evidence exists to make the development-only decision."
+  },
+  "guardrails": {
+    "frozen_test_accessed": false,
+    "frozen_test_evaluation_deferred_to_session_5": true,
+    "approved_for_final_test": false,
+    "no_further_model_or_threshold_tuning": true
+  }
+}

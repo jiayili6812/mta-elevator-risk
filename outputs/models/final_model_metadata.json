@@ -1,0 +1,199 @@
+{
+  "created_at_utc": "2026-06-15T17:18:24.502286+00:00",
+  "artifact": "outputs/models/final_random_forest.joblib",
+  "artifact_sha256": "b028b12f27979a49bfcc26b95dede2a7b732c50a025d489adcbf80fcc119b626",
+  "source_data_sha256": "ba428c133e42ec3f9d3bddaff01d434d8bad2631587e602f3509a22dfe47c1a2",
+  "pipeline_config_sha256": "b7e76a8bf3daf814ef00cad4efd4adfe466d8ecbefac87649e58b794b09c97ed",
+  "final_selection_sha256": "cf6ca2b7451d3d6d426cf4776d6d1bc34ecde29df9af3c9541bc3263342edd89",
+  "exact_pipeline_config": {
+    "project": {
+      "name": "mta-elevator-next-month-failure",
+      "random_seed": 42
+    },
+    "paths": {
+      "availability_csv": "data/raw/df3_availability.csv",
+      "outputs_dir": "outputs"
+    },
+    "target": {
+      "horizon_months": 1,
+      "unscheduled_outage_threshold": 2,
+      "entrapment_threshold": 0
+    },
+    "secondary_target": {
+      "unscheduled_outage_threshold": 1,
+      "entrapment_threshold": 0
+    },
+    "split": {
+      "frozen_test_start": "2025-02-01",
+      "frozen_test_end": "2025-04-01",
+      "validation_months": 3,
+      "rolling_validation_folds": 4
+    },
+    "features": {
+      "lag_months": [
+        1,
+        2,
+        3
+      ],
+      "rolling_windows": [
+        3,
+        6
+      ],
+      "include_age": true,
+      "age_missing_strategy": "median_imputation_with_missingness_indicator",
+      "include_seasonality": true,
+      "selected_feature_set": "full_history",
+      "feature_sets": {
+        "current_only": {
+          "lag_months": [],
+          "rolling_windows": []
+        },
+        "short_history": {
+          "lag_months": [
+            1,
+            2,
+            3
+          ],
+          "rolling_windows": [
+            3
+          ]
+        },
+        "full_history": {
+          "lag_months": [
+            1,
+            2,
+            3
+          ],
+          "rolling_windows": [
+            3,
+            6
+          ]
+        }
+      }
+    },
+    "eligibility": {
+      "include_newly_introduced_equipment": true,
+      "excluded_equipment_code_suffixes": [
+        "X"
+      ],
+      "exclusion_reason": "Current X-suffixed rows have structurally incomplete target and age reporting.",
+      "minimum_history_months": null
+    },
+    "modeling": {
+      "primary_metric": "average_precision",
+      "supporting_metrics": [
+        "precision",
+        "recall",
+        "false_negatives",
+        "roc_auc",
+        "brier_score"
+      ],
+      "provisional_minimum_pr_auc": 0.45,
+      "provisional_strong_pr_auc": 0.55
+    },
+    "guardrails": {
+      "final_test_acknowledgment": "I_UNDERSTAND_THIS_ACCESSES_THE_FROZEN_TEST_SET",
+      "audit_log": "outputs/metrics/frozen_test_access.log",
+      "final_selection_record": "config/final_model_selection.yaml",
+      "expected_frozen_target_eligible_rows": 1022,
+      "expected_frozen_target_eligible_rows_by_month": {
+        "2025-02-01": 340,
+        "2025-03-01": 341,
+        "2025-04-01": 341
+      },
+      "expected_frozen_feature_rows": 974,
+      "expected_frozen_feature_rows_by_month": {
+        "2025-02-01": 324,
+        "2025-03-01": 324,
+        "2025-04-01": 326
+      }
+    }
+  },
+  "exact_final_selection": {
+    "approved_for_final_test": true,
+    "approval_date": "2026-06-16",
+    "selected_target": "primary",
+    "selected_model": "random_forest",
+    "selected_feature_set": "full_history_without_age",
+    "selected_threshold": 0.4433219097353501,
+    "development_results_path": "outputs/metrics/final_development_model_decision.json",
+    "selected_parameters": {
+      "n_estimators": 600,
+      "max_depth": 20,
+      "min_samples_leaf": 15,
+      "max_features": "sqrt",
+      "class_weight": "balanced_subsample",
+      "random_state": 42
+    },
+    "calibration": "none",
+    "threshold_policy": "approximately_70_percent_recall_selected_on_folds_1_to_3",
+    "decision_notes": "Development-only selection completed and locked. Session 5 preflight passed before approval; frozen-test evaluation is authorized exactly once with no post-test tuning."
+  },
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.7.1",
+    "PyYAML": "6.0.1",
+    "joblib": "1.4.2"
+  },
+  "runtime": {
+    "python": "3.12.2",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  },
+  "fit_audit": {
+    "fit_count": 1,
+    "fit_rows": 13202,
+    "fit_equipment": 324,
+    "fit_start": "2021-06-01",
+    "fit_end": "2025-01-01",
+    "fit_precedes_frozen_test": true,
+    "preprocessing_fit_scope": "eligible development rows only",
+    "frozen_rows_used_for_learned_preprocessing": 0,
+    "frozen_labels_accessed_after_fit": true,
+    "fit_seconds": 1.9276927500031888
+  },
+  "features": [
+    "Total Outages",
+    "Unscheduled Outages",
+    "Scheduled Outages",
+    "Entrapments",
+    "AM Peak Availability",
+    "PM Peak Availability",
+    "24-Hour Availability",
+    "total_outages_lag_1",
+    "total_outages_lag_2",
+    "total_outages_lag_3",
+    "total_outages_roll_3_mean",
+    "total_outages_roll_6_mean",
+    "unscheduled_outages_lag_1",
+    "unscheduled_outages_lag_2",
+    "unscheduled_outages_lag_3",
+    "unscheduled_outages_roll_3_mean",
+    "unscheduled_outages_roll_6_mean",
+    "scheduled_outages_lag_1",
+    "scheduled_outages_lag_2",
+    "scheduled_outages_lag_3",
+    "scheduled_outages_roll_3_mean",
+    "scheduled_outages_roll_6_mean",
+    "entrapments_lag_1",
+    "entrapments_lag_2",
+    "entrapments_lag_3",
+    "entrapments_roll_3_mean",
+    "entrapments_roll_6_mean",
+    "am_peak_availability_lag_1",
+    "am_peak_availability_lag_2",
+    "am_peak_availability_lag_3",
+    "am_peak_availability_roll_3_mean",
+    "am_peak_availability_roll_6_mean",
+    "pm_peak_availability_lag_1",
+    "pm_peak_availability_lag_2",
+    "pm_peak_availability_lag_3",
+    "pm_peak_availability_roll_3_mean",
+    "pm_peak_availability_roll_6_mean",
+    "24hour_availability_lag_1",
+    "24hour_availability_lag_2",
+    "24hour_availability_lag_3",
+    "24hour_availability_roll_3_mean",
+    "24hour_availability_roll_6_mean"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "logistic_regression": {
+    "2024-02_to_2024-04": {
+      "pr_auc": 0.6723625062304139,
+      "roc_auc": 0.7563405133017591,
+      "brier_score": 0.20594698266187517,
+      "precision": 0.6534090909090909,
+      "recall": 0.6036745406824147,
+      "threshold": 0.5,
+      "true_negatives": 415,
+      "false_positives": 122,
+      "false_negatives": 151,
+      "true_positives": 230
+    },
+    "2024-05_to_2024-07": {
+      "pr_auc": 0.6930097347815621,
+      "roc_auc": 0.753115962309917,
+      "brier_score": 0.2025299053378815,
+      "precision": 0.6620111731843575,
+      "recall": 0.5969773299748111,
+      "threshold": 0.5,
+      "true_negatives": 419,
+      "false_positives": 121,
+      "false_negatives": 160,
+      "true_positives": 237
+    },
+    "2024-08_to_2024-10": {
+      "pr_auc": 0.6266446470416336,
+      "roc_auc": 0.7136704204886022,
+      "brier_score": 0.2139942947328117,
+      "precision": 0.5988700564971752,
+      "recall": 0.5506493506493506,
+      "threshold": 0.5,
+      "true_negatives": 430,
+      "false_positives": 142,
+      "false_negatives": 173,
+      "true_positives": 212
+    },
+    "2024-11_to_2025-01": {
+      "pr_auc": 0.7072831917049668,
+      "roc_auc": 0.7268717538265581,
+      "brier_score": 0.21261274373838102,
+      "precision": 0.649890590809628,
+      "recall": 0.6556291390728477,
+      "threshold": 0.5,
+      "true_negatives": 353,
+      "false_positives": 160,
+      "false_negatives": 156,
+      "true_positives": 297
+    }
+  },
+  "random_forest": {
+    "2024-02_to_2024-04": {
+      "pr_auc": 0.6775925785770298,
+      "roc_auc": 0.7524010615991437,
+      "brier_score": 0.20016857937345944,
+      "precision": 0.6483516483516484,
+      "recall": 0.6194225721784777,
+      "threshold": 0.5,
+      "true_negatives": 409,
+      "false_positives": 128,
+      "false_negatives": 145,
+      "true_positives": 236
+    },
+    "2024-05_to_2024-07": {
+      "pr_auc": 0.6874877851320806,
+      "roc_auc": 0.7473738221849053,
+      "brier_score": 0.20046030371151383,
+      "precision": 0.6544502617801047,
+      "recall": 0.6297229219143576,
+      "threshold": 0.5,
+      "true_negatives": 408,
+      "false_positives": 132,
+      "false_negatives": 147,
+      "true_positives": 250
+    },
+    "2024-08_to_2024-10": {
+      "pr_auc": 0.6435535482165982,
+      "roc_auc": 0.7197665970393243,
+      "brier_score": 0.2079870817069889,
+      "precision": 0.6077348066298343,
+      "recall": 0.5714285714285714,
+      "threshold": 0.5,
+      "true_negatives": 430,
+      "false_positives": 142,
+      "false_negatives": 165,
+      "true_positives": 220
+    },
+    "2024-11_to_2025-01": {
+      "pr_auc": 0.7124775032041422,
+      "roc_auc": 0.72728915740418,
+      "brier_score": 0.20812437957077065,
+      "precision": 0.6518518518518519,
+      "recall": 0.5827814569536424,
+      "threshold": 0.5,
+      "true_negatives": 372,
+      "false_positives": 141,
+      "false_negatives": 189,
+      "true_positives": 264
+    }
+  },
+  "hist_gradient_boosting": {
+    "2024-02_to_2024-04": {
+      "pr_auc": 0.6437127568874619,
+      "roc_auc": 0.737547471370548,
+      "brier_score": 0.20428459908819718,
+      "precision": 0.6474358974358975,
+      "recall": 0.5301837270341208,
+      "threshold": 0.5,
+      "true_negatives": 427,
+      "false_positives": 110,
+      "false_negatives": 179,
+      "true_positives": 202
+    },
+    "2024-05_to_2024-07": {
+      "pr_auc": 0.687059726752177,
+      "roc_auc": 0.7482461050471126,
+      "brier_score": 0.19857257543724025,
+      "precision": 0.6750788643533123,
+      "recall": 0.5390428211586902,
+      "threshold": 0.5,
+      "true_negatives": 437,
+      "false_positives": 103,
+      "false_negatives": 183,
+      "true_positives": 214
+    },
+    "2024-08_to_2024-10": {
+      "pr_auc": 0.6355098708776872,
+      "roc_auc": 0.7146875851421305,
+      "brier_score": 0.20622472503601239,
+      "precision": 0.6210191082802548,
+      "recall": 0.5064935064935064,
+      "threshold": 0.5,
+      "true_negatives": 453,
+      "false_positives": 119,
+      "false_negatives": 190,
+      "true_positives": 195
+    },
+    "2024-11_to_2025-01": {
+      "pr_auc": 0.7058371053662483,
+      "roc_auc": 0.7307811471283063,
+      "brier_score": 0.208323665178437,
+      "precision": 0.6901408450704225,
+      "recall": 0.5408388520971302,
+      "threshold": 0.5,
+      "true_negatives": 403,
+      "false_positives": 110,
+      "false_negatives": 208,
+      "true_positives": 245
+    }
+  }
+}
