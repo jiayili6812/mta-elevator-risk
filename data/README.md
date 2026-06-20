@@ -38,7 +38,7 @@ Strongly preferred contextual columns:
 - Local source export:
   `data/raw/MTA_NYCT_Subway_Elevator_and_Escalator_Availability_accessed_July_2025 copy.csv`.
 - Session 6 latest official export:
-  `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv`.
+  `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv`.
 - Session 6 canonical latest file:
   `data/processed/session6_latest_canonical_availability.csv`.
 - Session 7 latest unlabeled prediction output:

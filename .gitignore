@@ -11,7 +11,7 @@ data/raw/*
 
 data/external/*
 !data/external/.gitkeep
-!data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv
+!data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv
 
 data/processed/
 

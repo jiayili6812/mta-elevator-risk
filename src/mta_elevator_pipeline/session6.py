@@ -20,7 +20,7 @@ from .validation import validate_availability_data
 
 
 LATEST_SOURCE = Path(
-    "data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv"
+    "data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv"
 )
 LATEST_CANONICAL = Path("data/processed/session6_latest_canonical_availability.csv")
 METRICS_JSON = Path("outputs/metrics/session6_prospective_metrics.json")

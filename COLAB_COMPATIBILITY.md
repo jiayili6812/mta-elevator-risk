@@ -12,7 +12,7 @@ and generates the final backend reports plus latest unlabeled predictions.
 Upload or place these files in the cloned repository:
 
 - `data/raw/df3_availability.csv`
-- `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv`
+- `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv`
 - `outputs/models/final_random_forest.joblib`
 - `outputs/metrics/session5_frozen_test_metrics.json`
 

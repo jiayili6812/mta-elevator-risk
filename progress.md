@@ -49,7 +49,7 @@
 - Source-to-canonical skeleton and overwrite guardrail tests were added.
 - Session 6 prospective external evaluation completed using the untouched
   June 16, 2026 official export at
-  `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv`.
+  `data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv`.
 - The latest official export was transformed through
   `src/mta_elevator_pipeline/source_to_canonical.py` and saved separately as
   `data/processed/session6_latest_canonical_availability.csv`; the fixed
