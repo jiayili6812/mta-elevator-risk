@@ -1,8 +1,8 @@
 {
   "status": "completed",
-  "created_at_utc": "2026-06-16T09:05:05.193345+00:00",
+  "created_at_utc": "2026-06-20T06:39:09.743544+00:00",
   "source": {
-    "path": "/Users/jiali/codex-mta-elevators copy/github/data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv",
+    "path": "/content/mta-elevator-pipeline/data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv",
     "sha256": "635ad215191d269a0ad4d14e05ec09bbc5339dcb8acf638cf345189577b70a3a",
     "rows": 80316,
     "columns": [
@@ -167,7 +167,7 @@
   "overall_metrics": {
     "pr_auc": 0.6530076693765364,
     "roc_auc": 0.7119943929390102,
-    "brier_score": 0.21371088654012177,
+    "brier_score": 0.21371088654012174,
     "precision": 0.5642781875658588,
     "recall": 0.71447631754503,
     "threshold": 0.4433219097353501,
@@ -189,7 +189,7 @@
         "lower": 0.2,
         "upper": 0.4,
         "rows": 983,
-        "mean_probability": 0.3292187247300357,
+        "mean_probability": 0.32921872473003577,
         "observed_rate": 0.29399796541200407
       },
       {
@@ -203,7 +203,7 @@
         "lower": 0.6000000000000001,
         "upper": 0.8,
         "rows": 755,
-        "mean_probability": 0.6894413013880453,
+        "mean_probability": 0.6894413013880455,
         "observed_rate": 0.6503311258278146
       },
       {
@@ -214,7 +214,7 @@
         "observed_rate": 0.8087431693989071
       }
     ],
-    "expected_calibration_error": 0.043823416696776495,
+    "expected_calibration_error": 0.043823416696776564,
     "mean_probability": 0.48148765027341883,
     "observed_prevalence": 0.43766423357664236
   },
@@ -247,21 +247,21 @@
             "lower": 0.2,
             "upper": 0.4,
             "rows": 105,
-            "mean_probability": 0.32416086564401075,
+            "mean_probability": 0.3241608656440108,
             "observed_rate": 0.22857142857142856
           },
           {
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 117,
-            "mean_probability": 0.49813818774645413,
+            "mean_probability": 0.4981381877464542,
             "observed_rate": 0.47863247863247865
           },
           {
             "lower": 0.6000000000000001,
             "upper": 0.8,
             "rows": 78,
-            "mean_probability": 0.6908741707324637,
+            "mean_probability": 0.6908741707324635,
             "observed_rate": 0.5769230769230769
           },
           {
@@ -272,7 +272,7 @@
             "observed_rate": 0.7142857142857143
           }
         ],
-        "expected_calibration_error": 0.07046795243799515,
+        "expected_calibration_error": 0.07046795243799513,
         "mean_probability": 0.4734091289085834,
         "observed_prevalence": 0.40294117647058825
       }
@@ -298,7 +298,7 @@
             "lower": 0.0,
             "upper": 0.2,
             "rows": 29,
-            "mean_probability": 0.10560789552334207,
+            "mean_probability": 0.10560789552334206,
             "observed_rate": 0.06896551724137931
           },
           {
@@ -312,7 +312,7 @@
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 127,
-            "mean_probability": 0.491343650912169,
+            "mean_probability": 0.4913436509121691,
             "observed_rate": 0.36220472440944884
           },
           {
@@ -330,7 +330,7 @@
             "observed_rate": 0.625
           }
         ],
-        "expected_calibration_error": 0.09471021368771695,
+        "expected_calibration_error": 0.09471021368771698,
         "mean_probability": 0.46823962545242287,
         "observed_prevalence": 0.3735294117647059
       }
@@ -356,7 +356,7 @@
             "lower": 0.0,
             "upper": 0.2,
             "rows": 26,
-            "mean_probability": 0.10792043558694421,
+            "mean_probability": 0.10792043558694418,
             "observed_rate": 0.11538461538461539
           },
           {
@@ -370,14 +370,14 @@
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 129,
-            "mean_probability": 0.48280426202273313,
+            "mean_probability": 0.4828042620227332,
             "observed_rate": 0.4496124031007752
           },
           {
             "lower": 0.6000000000000001,
             "upper": 0.8,
             "rows": 58,
-            "mean_probability": 0.6742712855802878,
+            "mean_probability": 0.6742712855802879,
             "observed_rate": 0.6379310344827587
           },
           {
@@ -388,7 +388,7 @@
             "observed_rate": 0.7647058823529411
           }
         ],
-        "expected_calibration_error": 0.03359476044533661,
+        "expected_calibration_error": 0.03359476044533666,
         "mean_probability": 0.4547439177782431,
         "observed_prevalence": 0.4222873900293255
       }
@@ -428,7 +428,7 @@
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 116,
-            "mean_probability": 0.49216236817503517,
+            "mean_probability": 0.4921623681750351,
             "observed_rate": 0.5172413793103449
           },
           {
@@ -446,7 +446,7 @@
             "observed_rate": 0.7
           }
         ],
-        "expected_calibration_error": 0.023860933111459884,
+        "expected_calibration_error": 0.023860933111459905,
         "mean_probability": 0.47014148858538407,
         "observed_prevalence": 0.4633431085043988
       }
@@ -479,7 +479,7 @@
             "lower": 0.2,
             "upper": 0.4,
             "rows": 109,
-            "mean_probability": 0.32799999178846523,
+            "mean_probability": 0.3279999917884652,
             "observed_rate": 0.3119266055045872
           },
           {
@@ -504,7 +504,7 @@
             "observed_rate": 0.8333333333333334
           }
         ],
-        "expected_calibration_error": 0.03104978954478406,
+        "expected_calibration_error": 0.031049789544784042,
         "mean_probability": 0.4826626927705905,
         "observed_prevalence": 0.45161290322580644
       }
@@ -516,7 +516,7 @@
       "prevalence": 0.4662756598240469,
       "pr_auc": 0.6957299293475274,
       "roc_auc": 0.7232013269749119,
-      "brier_score": 0.21036417056408085,
+      "brier_score": 0.21036417056408083,
       "precision": 0.583756345177665,
       "recall": 0.7232704402515723,
       "threshold": 0.4433219097353501,
@@ -544,7 +544,7 @@
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 129,
-            "mean_probability": 0.49542132665489974,
+            "mean_probability": 0.49542132665489963,
             "observed_rate": 0.4108527131782946
           },
           {
@@ -562,7 +562,7 @@
             "observed_rate": 0.8571428571428571
           }
         ],
-        "expected_calibration_error": 0.05387318946155659,
+        "expected_calibration_error": 0.05387318946155655,
         "mean_probability": 0.4845026627299306,
         "observed_prevalence": 0.4662756598240469
       }
@@ -616,11 +616,11 @@
             "lower": 0.8,
             "upper": 1.0,
             "rows": 23,
-            "mean_probability": 0.8486332956682631,
+            "mean_probability": 0.848633295668263,
             "observed_rate": 0.9565217391304348
           }
         ],
-        "expected_calibration_error": 0.028831153587776673,
+        "expected_calibration_error": 0.02883115358777668,
         "mean_probability": 0.49319444874636287,
         "observed_prevalence": 0.4897959183673469
       }
@@ -653,7 +653,7 @@
             "lower": 0.2,
             "upper": 0.4,
             "rows": 94,
-            "mean_probability": 0.3420241023862531,
+            "mean_probability": 0.3420241023862532,
             "observed_rate": 0.3617021276595745
           },
           {
@@ -678,7 +678,7 @@
             "observed_rate": 0.8214285714285714
           }
         ],
-        "expected_calibration_error": 0.020354564593753628,
+        "expected_calibration_error": 0.0203545645937536,
         "mean_probability": 0.4952115913238565,
         "observed_prevalence": 0.48554913294797686
       }
@@ -776,7 +776,7 @@
             "lower": 0.4,
             "upper": 0.6000000000000001,
             "rows": 140,
-            "mean_probability": 0.4964685358770706,
+            "mean_probability": 0.49646853587707074,
             "observed_rate": 0.3357142857142857
           },
           {
@@ -794,7 +794,7 @@
             "observed_rate": 0.8095238095238095
           }
         ],
-        "expected_calibration_error": 0.10862433504298738,
+        "expected_calibration_error": 0.10862433504298744,
         "mean_probability": 0.4915053426200371,
         "observed_prevalence": 0.3930635838150289
       }

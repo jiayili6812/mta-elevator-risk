@@ -6,7 +6,7 @@ or eligibility rule was changed.
 
 ## Source And Canonical Data
 
-- Latest official source: `/Users/jiali/codex-mta-elevators copy/github/data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015_20260616.csv`
+- Latest official source: `/content/mta-elevator-pipeline/data/external/MTA_NYCT_Subway_Elevator_and_Escalator_Availability__Beginning_2015.csv`
 - Source rows: `80316` from `2015-01-01` through `2026-04-01`
 - Saved canonical file: `data/processed/session6_latest_canonical_availability.csv`
 - Canonical rows: `23239` from `2021-01-01` through `2026-04-01`
