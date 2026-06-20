@@ -1,18 +1,18 @@
-# Notebook Policy
+# Notebooks
 
-Notebooks are optional presentation and diagnostic layers. They must call the
-tested functions in `src/mta_elevator_pipeline/` rather than duplicate pipeline
-logic.
+This directory contains notebook entry points for running or presenting the
+tested pipeline. Notebooks should call package code in
+`src/mta_elevator_pipeline/` rather than duplicate pipeline logic.
 
-Planned notebooks:
+## Colab Runner
 
-- `01_data_audit.ipynb`
-- `02_model_comparison.ipynb`
-- `03_final_results.ipynb`
-- `colab_runner.ipynb`
+`colab_runner.ipynb` is the supported clean-Colab reproducibility notebook. It
+clones the GitHub repo, downloads the locked model artifact from GitHub
+Releases, installs core dependencies, runs tests, validates the fixed data
+snapshot, runs Session 6 prospective external evaluation, and runs Session 7
+final report and latest-score generation.
 
-Create these only when the corresponding pipeline stages are stable.
+It does not run `final-evaluate`.
 
-`colab_runner.ipynb` now contains the Session 6 CPU workflow: install core
-dependencies, run tests, validate source data, and execute prospective
-evaluation without invoking frozen-test evaluation.
+See `../COLAB_COMPATIBILITY.md` for the full Colab workflow, included data
+files, model artifact requirements, and expected outputs.
